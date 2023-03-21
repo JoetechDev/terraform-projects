@@ -1,5 +1,4 @@
 variable "region" {
-
   description = "Region of Cloud Resources "
   type        = map(string)
   default = {
@@ -15,10 +14,10 @@ variable "versioning" {
 variable "Department" {
 description = "Department of Resource"
 type = string
-default = "Finanace"
+default = "Finance"
 }
 variable "acl" {
   description = "Public or Private ACL"
   type = string
-  default = "Private"
+  default = "private"
 }

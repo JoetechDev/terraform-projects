@@ -1,9 +1,11 @@
 module "s3bucket" {
   source = "./s3bucket"
-  #   version = "1.0.0"
-
+   #   version = "1.0.0"
+   region = var.region
+   versioning  = var.versioning
+   acl = var.acl
+   Department  = "engineering"
 }
-
 terraform {
   cloud {
     organization = "Joetech"
@@ -15,9 +17,7 @@ terraform {
 }
 output "module_random" {
   value = module.s3bucket.random_number
-
 }
-
 output "aws_kms_key" {
   value = module.s3bucket.aws_kms_key
 }

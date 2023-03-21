@@ -1,4 +1,4 @@
 region = "us-east-1"
 versioning = true
 Department = "Engineering"
-acl = "Public"
+acl = "public"

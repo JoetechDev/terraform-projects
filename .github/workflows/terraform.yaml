@@ -1,0 +1,13 @@
+name: "Terraform Build"
+on:
+  - pull_request ["main"]
+jobs:
+  terraform-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Terraform init
+        run: terraform init
+      - name: Terraform validate
+        run: terraform validate
+      - name: terraform plan
+        run: terraform plan
