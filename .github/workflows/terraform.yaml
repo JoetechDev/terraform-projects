@@ -1,6 +1,6 @@
 name: "Terraform Build"
 on:
-  - pull_request ["main"]
+  - pull_request
 jobs:
   terraform-build:
     runs-on: ubuntu-latest
