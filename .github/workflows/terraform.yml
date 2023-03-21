@@ -16,6 +16,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWSKEYID }}
+        aws-secret-access-key: ${{ secrets.AWSSECRETKEY }}
+        aws-region: us-west-2
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
       with:
@@ -24,6 +30,8 @@ jobs:
       run: terraform init
    # - name: Terraform Format
     #  run: terraform fmt -check
+    - name: Terraform Validate
+      run: terraform validate
     - name: Terraform Plan
       run: terraform plan     #-input=falses
     - name: Terraform Apply
