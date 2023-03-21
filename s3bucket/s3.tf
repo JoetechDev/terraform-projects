@@ -4,16 +4,16 @@ resource "aws_kms_key" "joetechkey" {
 }
 resource "random_integer" "random_number" {
   min = 1
-  max = 9999
+  max = 99999
 }
 resource "aws_s3_bucket" "joetech" {
   depends_on = [
     random_integer.random_number
   ]
-  acl    = "private"
+  acl    = var.acl
   bucket = "bootcamp30-${random_integer.random_number.result}-joseph"
   tags = {
-    "Department" = "Finance"
+    "Department" = var.Department
   }
   versioning {
     enabled = var.versioning

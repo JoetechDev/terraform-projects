@@ -12,3 +12,13 @@ variable "versioning" {
   type = bool
   default = true
 }
+variable "Department" {
+description = "Department of Resource"
+type = string
+default = "Finanace"
+}
+variable "acl" {
+  description = "Public or Private ACL"
+  type = string
+  default = "Private"
+}
