@@ -7,3 +7,8 @@ variable "region" {
     "2" = "us-east-2"
   }
 }
+variable "versioning" {
+  description = "Activating ACL"
+  type = bool
+  default = true
+}

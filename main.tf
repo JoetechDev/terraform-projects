@@ -1,6 +1,6 @@
 module "s3bucket" {
-  source  = "./s3bucket"
-  version = "1.0.0"
+  source = "./s3bucket"
+  #   version = "1.0.0"
 
 }
 
