@@ -1,7 +1,10 @@
+## Terraform 
+A linode k8s cluster using Terraform  
+
 
 ## Linode Kubernetes Engine
 
-Linode Kubernetes Engine ([LKE](https://www.linode.com/docs/guides/deploy-and-manage-a-cluster-with-linode-kubernetes-engine-a-tutorial/)) is the managed K8s solution provided by Linode.
+Linode Kubernetes Engine is the managed K8s solution provided by Linode.
 
 This is a managed kubernetes cluster with default 3 nodes & type = "g6-standard-4"
 
